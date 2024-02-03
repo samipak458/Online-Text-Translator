@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <title>Result</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid justify-content-center my-1">
+            <h1 class="navbar-brand mb-0 h1">Online Language Translation Service</h1>
+        </div>
+    </nav>
+
+    <div class="container mt-4 mb-4">
+        <h2 class="ml-3">Results:</h2>
+
+        <div class="container row">
+            <div class="col-md-6 mb-2">
+                <div class="card" style="width: auto; height: 200px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Original text:</h5>   
+                        <p class="card-text">{{ original_text }}</p>    
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card" style="width: auto; height: 200px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Translated text:</h5>  
+                        <p class="card-text">{{ translated_text }}</p>    
+                        <h6 class="card-subtitle mt-5 mb-0 text-muted text-right">Selected Language Code: {{ target_language }}</h6> 
+                    </div>
+                </div>
+            </div>
+
+                <a class="btn btn-secondary btn-md rounded text-right ml-3 mt-4" href="{{ url_for('index') }}">Try another one!</a>
+            
+
+        </div>  
+
+    </div>
+</body>
+
+</html>
