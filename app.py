@@ -19,7 +19,6 @@ def index_post():
      return render_template('index.html')
     
     else:
-
     # Load the values from .env
      key = os.environ['KEY']
      endpoint = os.environ['ENDPOINT']
